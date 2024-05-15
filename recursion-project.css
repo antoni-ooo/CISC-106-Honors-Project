@@ -1,0 +1,149 @@
+/* General Page Styling*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 5px;
+  color: rgb(247, 247, 247);
+  font-family: "Space Mono", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(61, 60, 60);
+}
+
+/* Styling the Header*/
+header {
+  padding: 15px 0 0 0;
+  /*border: solid 1px red;*/
+}
+
+.title {
+  color: rgb(240, 145, 56);
+}
+
+.header-container {
+  display: flex;
+  /*border: solid 1px red;*/
+  justify-content: left;
+  align-items: end;
+}
+
+.signature {
+  /*border: solid 1px yellow;*/
+  padding: 15px 0 0 0;
+  margin: 0 0 0 25px;
+  color: rgb(228, 137, 52);
+}
+
+.class-id {
+  padding: 15px 0 2.5px 0;
+  margin: 0 0 0 25px;
+  color: rgb(228, 137, 52);
+  /*border: solid 1px blue;*/
+  align-items: baseline;
+}
+
+/* Navbar styling*/
+.table-of-contents {
+  padding: 30px 0 0 0;
+  margin: 0 125px 0 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toc-item {
+  padding: 0 10px 2.5px 10px;
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+  list-style: none;
+}
+
+.toc-link {
+  text-decoration: none;
+}
+
+/* Introduction */
+.introduction {
+  /*border: solid 1px green;*/
+  padding-bottom: 7.5px;
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+}
+
+.h1-inline {
+  display: inline;
+  /*border: solid 1px green;*/
+}
+
+#Recursion-h1 {
+  margin-left: -5px;
+}
+
+.h1-inline:hover {
+  color: rgb(180, 180, 180);
+}
+
+/* Articles */
+.article-p {
+  margin: 10px 0 10px 0;
+}
+
+.recur-calls {
+  color: rgb(180, 180, 180);
+}
+#recursive-calls {
+  text-align: center;
+  font-size: small;
+  padding-bottom: 5px;
+}
+
+#carpet {
+  margin-top: 10px;
+  /*border: solid 1px green;*/
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+}
+
+#fun-fact {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+ol {
+  /*border: solid 1px orange;*/
+  margin: 0 0 0 40px;
+}
+
+#snowflake {
+  margin-top: 10px;
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+}
+
+#tree {
+  margin-top: 10px;
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+}
+
+#triangle {
+  margin-top: 10px;
+  border-bottom: solid 2.5px rgb(32, 32, 32);
+}
+
+footer {
+  text-align: center;
+}
+/* Images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* Link Handling */
+a:visited {
+  text-decoration: none;
+  color: rgb(247, 247, 247);
+}
+
+a:hover {
+  color: rgb(180, 180, 180);
+}
