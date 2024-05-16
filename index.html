@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>On Recursive Graphics</title>
+    <link rel="icon" href="Images/SDCCD.png" />
+    <link rel="stylesheet" href="recursion-project.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="title" id="title">Generating Computer Graphics with Recursion</h1>
+      <div class="header-container">
+        <h3 class="signature">by Antonio Olivas</h3>
+        <h5 class="class-id">CISC106 Spring 2024</h5>
+      </div>
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <ul>
+        <h5 class="table-of-contents">
+          <li class="toc-item">
+            <a class="toc-link" href="#carpet">Sierpiński Carpet</a>
+          </li>
+          <li class="toc-item">
+            <a class="toc-link" href="#snowflake">Koch Snowflake</a>
+          </li>
+          <li class="toc-item">
+            <a class="toc-link" href="#tree">Tree</a>
+          </li>
+          <li class="toc-item">
+            <a class="toc-link" href="#triangle">Sierpiński Triangle</a>
+          </li>
+        </h5>
+      </ul>
+    </nav>
+    <!-- INTRODUCTION-->
+    <article class="introduction">
+      <p>
+        <a href="Images/recursion-meme.png" target="_blank">
+          <h1 class="h1-inline" id="Recursion-h1">Recursion</h1></a
+        >
+        is a peculiar function-writing paradigm that asks programmers to do the
+        unintuitive when designing functions:
+        <em
+          >to declare a function call to the very function they're defining, within said definition!
+        </em>
+        <br />
+        <br />
+        Although paradoxical on its face, recursion is a powerful tool in a
+        programmer's tool-belt that allows one the ability to navigate data
+        structures, and in our case, construct very cool fractal graphics
+        in a way that would be difficult to achieve by other means! :]
+      </p>
+    </article>
+    <!-- SIERPINSKI CARPET -->
+    <article class="carpet" id="carpet">
+      <p><h1 class="h1-inline"><em>CASE STUDY 1:</em></h1>
+        <a
+          href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_carpet"
+          target="_blank"
+          ><h1 class="h1-inline">Sierpiński Carpet</h1></a
+        >
+      </p>
+      <p class="article-p">This first target graphic resembles a quilt-like pattern, and is ultimately achieved through the primary establishment of a "base square" from which our recursive function can construct its larger picture from.</p>
+      <p class="article-p">As with every recursive function, it is imperative to account for a <em>base case</em> that our function can look towards for resolution.</p>
+      <p class="article-p">In this case, we want our base case to instruct DrRacket to create a solid square whose color is directly pulled from the first element of our argument list:</p>
+      <img class="carpet code" src="Images/Carpet Code.jpg" alt="Sierpiński Carpet DrRacket Code">
+      <p>Under the same cond statement, we can further instruct DrRacket to populate an image using two things:
+        <ol>
+          <li>A recursive call to this function, with the rest of our list</li>
+          <li>A solid square, whose dimensions corresponds to the size of our recursive call and is painted according to the first element of our argument list</li>
+        </ol>
+        We then take advantage of the <em>above</em> and then <em>beside</em> syntax to populate our Sierpiński Carpet!:
+      </p>
+      <img class="carpet-graphic" src="Images/Sierpinski Carpet.jpg" alt="Sierpiński Carpet Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">5 recursive calls</em></p>
+      <p class="article-p" id="fun-fact"> <em> Fun Fact: the Sierpiński Carpet was first described in 1916</em></p>
+    </article>
+    <!-- KOCH SNOWFLAKE-->
+    <article class="snowflake" id="snowflake">
+      <p><h1 class="h1-inline"><em>CASE STUDY 2:</em></h1>
+        <a
+          href="https://en.wikipedia.org/wiki/Koch_snowflake"
+          target="_blank"
+          ><h1 class="h1-inline">Koch Snowflake</h1></a
+        >
+      </p>
+      <p class="article-p">Our second recursive graphic aims to recreate a snowflake pattern.</p>
+      <p class="article-p">This go around, we're going to want our "base case" to return a very tiny, solid square. </p>
+      <p class="article-p">When considering how we're going to go about constructing a snowflake-ian curve from a square, we're going to want to concede that we're not going to construct a line. Rather, we're going to create the illusion of curves via the rotation of base-squares and recursive calls.</p>
+      <p class="article-p">Fortunately for us this can be achieved using "beside/align":</p>
+      <img src="Images/Curve Code.jpg" alt="Koch Curve DrRacket Code">
+      <p class="article-p">After a few layers of recursion we're able to achieve a shape that's beginning to resemble a snowflake <em>(6 instances of recursion here)</em>:</p>
+      <img src="Images/Curve.jpg" alt="Koch Curve Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">6 recursive calls</em></p>
+      <p class="article-p">Having achieved this much, it isn't too much more work to construct our snowflake from here.</p>
+      <p class="article-p">Considering the symmetrical nature of snowflakes, we're able to construct our snowflake by positioning three different calls to our previously created function in relation to one another as such:</p>
+      <img src="Images/Snowflake Code.jpg" alt="Koch Snowflake DrRacket Code">
+      <p class="article-p">With our final snowflake defined to position calls to our recursive function, we can create our snowflake! :</p>
+      <img src="Images/Koch Snowflake.jpg" alt="Koch Snowflake Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">3 instances of 6 recursive calls</em></p>
+    </article>
+    <!-- TREE -->
+    <article class="tree" id="tree">
+      <p><h1 class="h1-inline"><em>CASE STUDY 3:</em></h1>
+        <a
+          href="https://en.wikipedia.org/wiki/Recursion_(computer_science)"
+          target="_blank"
+          ><h1 class="h1-inline">Tree</h1></a
+        >
+      </p>
+      <p class="article-p">This graphic is a popular recursive graphic, but is surprisingly complicated to achieve in DrRacket due to the nature of how these shapes and images are created.</p>
+      <p class="article-p">Despite this, we will want to begin this task as we would with any other recursive function: we want to account for a base case.</p>
+      <p class="article-p">For our purposes of constructing a tree, we will have our base case return us a "leaf" that is entirely just a solid, green rectangle as our means of indicating completion:</p>
+      <img src="Images/Tree Code.jpg" alt="Tree DrRacket Code">
+      <p class="article-p">Additionally, we're going to change the template of our function parameters: we're going to account for a <em>"num"</em> and for a <em>"length"</em>.</p>
+      <p class="article-p">We'll create some internal definitions within the function that give us the arithmetic needed to construct trees in such a way that they do not deconstruct <em>(positioning in DrRacket can be tricky for these kinds of things. If recursive rectangles are too big in this function they will cause the tree to quite literally break apart and deform, hence the need for "new-length")</em></p>
+      <p class="article-p">Considering that this function will be retuning our "leafs" upon <em>num = 1</em>, we have our function build our tree by dynamically creating solid, brown rectangles of <em>new-length</em> lengths.</p>
+      <p class="article-p">Arithmetic aside, the remainder of this function is rather straight-forward. We can achieve our desired fractal by taking advantage of <em>above</em>, <em>beside</em>, and <em>rotate</em>:</p>
+      <img src="Images/Tree Graphic v2.jpg" alt="Tree Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">8 recursive calls</em></p>
+      
+    </article>
+    <!-- SIERPINSKI TRIANGLE -->
+    <article class="triangle" id="triangle">
+      <p><h1 class="h1-inline"><em>CASE STUDY 4:</em></h1>
+        <a
+          href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle"
+          target="_blank"
+          ><h1 class="h1-inline">Sierpiński Triangle</h1></a
+        >
+      </p>
+      <p class="article-p">Our final fractal pattern is a Sierpiński triangle. This pattern is going to require us to establish a base case where we return the function a solid triangle:</p>
+      <p class="article-p"></p>
+      <img src="Images/Triangle Code.jpg" alt="Sierpiński Triangle DrRacket Code">
+      <p class="article-p">With a base case established, we can achieve our graphic by placing a recursive call to our function above two other recursive calls that are themselves positioned beside one another:</p>
+      <img src="Images/Triangle 3.jpg" alt="Sierpiński Triangle Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">5 recursive calls</em></p>
+    </article>
+    <script src="recursion-project.css"></script>
+  </body>
+  <!-- BACK TO TOP -->
+  <footer>
+    <a class="toc-link" href="#title" id="footer-link">
+      BACK TO TOP
+    </a>
+  </footer>
+</html>
