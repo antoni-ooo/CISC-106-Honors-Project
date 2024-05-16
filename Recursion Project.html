@@ -115,10 +115,14 @@
       </p>
       <p class="article-p">This graphic is a popular recursive graphic, but is surprisingly complicated to achieve in DrRacket due to the nature of how these shapes and images are created.</p>
       <p class="article-p">Despite this, we will want to begin this task as we would with any other recursive function: we want to account for a base case.</p>
-      <p class="article-p">For our purposes of constructing a tree, we will have our base case return us a "twig" that is entirely just a solid, brown rectangle:</p>
+      <p class="article-p">For our purposes of constructing a tree, we will have our base case return us a "leaf" that is entirely just a solid, green rectangle as our means of indicating completion:</p>
       <img src="Images/Tree Code.jpg" alt="Tree DrRacket Code">
-      <img src="Images/Tree.jpg" alt="Tree Graphic">
-      <p class="article-p" id="recursive-calls"><em class="recur-calls">9 recursive calls</em></p>
+      <p class="article-p">Additionally, we're going to change the template of our function parameters: we're going to account for a <em>"num"</em> and for a <em>"length"</em>.</p>
+      <p class="article-p">We'll create some internal definitions within the function that give us the arithmetic needed to construct trees in such a way that they do not deconstruct <em>(positioning in DrRacket can be tricky for these kinds of things. If recursive rectangles are too big in this function they will cause the tree to quite literally break apart and deform, hence the need for "new-length")</em></p>
+      <p class="article-p">Considering that this function will be retuning our "leafs" upon <em>num = 1</em>, we have our function build our tree by dynamically creating solid, brown rectangles of <em>new-length</em> lengths.</p>
+      <p class="article-p">Arithmetic aside, the remainder of this function is rather straight-forward. We can achieve our desired fractal by taking advantage of <em>above</em>, <em>beside</em>, and <em>rotate</em>:</p>
+      <img src="Images/Tree Graphic v2.jpg" alt="Tree Graphic">
+      <p class="article-p" id="recursive-calls"><em class="recur-calls">8 recursive calls</em></p>
       
     </article>
     <!-- SIERPINSKI TRIANGLE -->
